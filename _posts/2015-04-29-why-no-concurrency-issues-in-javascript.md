@@ -32,5 +32,4 @@ Well, that is a race condition but it's never gonna occur in javascript. Someone
 #### Threre's a feature in javascript [Run-to-Completion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#.22Run-to-completion.22)
 It guarrenties you whenever a code runs, it cannot be pre-empted and will run entirely before any other code runs. So, in case of above example, the pre-emption at line `queue = []` is never gonna happen, hence the race condition won't occur, ever.
 
-Still curuios? Read about 
-
+Still curious? Read about
