@@ -25,7 +25,7 @@ setInterval(function() {
 
 {% endhighlight %}
 
-Suppose line 8 `processValues(pending)` gets executed and processes the pending values but before preceeding to next line it gets pre-empted to process another event at line 4. It executes line 4 `pending.push(document.getElementById("textBox").value);` and adds another value to pending array which is supposed to be processed by `processValues()` function. Now the previous event is resumed from line 9 and empties the `pending` array, loosing the recently inserted value.
+Suppose line 8 `processValues(pending)` gets executed and processes the pending values but before proceeding to next line it gets pre-empted to process another event at line 4. It executes line 4 `pending.push(document.getElementById("textBox").value);` and adds another value to pending array which is supposed to be processed by `processValues()` function. Now the previous event is resumed from line 9 and empties the `pending` array, loosing the recently inserted value.
 
 That's a race condition, right? Well, that's true in many languages (C++, Java, etc) but not in javascript. Someone may have told you it's because javascript is single-threaded but that's not true either. Even though javascript is single-threaded you can still have asynchronous code blocks i.e. ajax requests, timers etc (if you're interested to know how it handles asynchronous code blocks, see http://www.quora.com/How-does-a-single-thread-handle-asynchronous-code-in-JavaScript). Then how come it does not have concurrency issues?
 
