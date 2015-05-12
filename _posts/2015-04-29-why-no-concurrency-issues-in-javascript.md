@@ -30,5 +30,7 @@ Suppose line `sendMouseMovements(mouseLocations)` gets executed and sends pendin
 Well, that is a race condition but it's never gonna occur in javascript. Someone may have told you it's because javascript is single-threaded and single-threaded applications can never face such concurrency issues. This is true only in case of non-scripting languages because you can't have asynchronous code in single-threaded non-scripting languages. But in javascript you have a whole lot of asynchronous code i.e. ajax requests, timers etc (if you're interested to know how it handles asynchronous code blocks, see [How Single Thread Handle Asynchronous Code](http://www.quora.com/How-does-a-single-thread-handle-asynchronous-code-in-JavaScript)). Then how come it does not have such race conditions?
 
 #### Threre's a feature in javascript [Run-to-Completion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#.22Run-to-completion.22)
-In simple words, it guarrenties that whenever a code runs (the code could be an async function), it cannot be pre-empted and will run entirely before any other code runs. So, in case of above example, the pre-emption at line `queue = []` is never gonna happen, hence the race condition won't occur, ever.
+It guarrenties you whenever a code runs, it cannot be pre-empted and will run entirely before any other code runs. So, in case of above example, the pre-emption at line `queue = []` is never gonna happen, hence the race condition won't occur, ever.
+
+Still curuios? Read about 
 
