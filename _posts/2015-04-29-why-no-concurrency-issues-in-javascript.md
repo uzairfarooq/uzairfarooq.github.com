@@ -12,16 +12,16 @@ Ever wondered why all the concurrency issues you were warned about in School don
 Lets consider the code snippet:
 
 {% highlight javascript linenos %}
-var pending = [];
-
-document.getElementById("submitBtn").addEventListener(function() {
-    pending.push(document.getElementById("textBox").value);
-});
+var mouseLocations = [];
 
 setInterval(function() {
-    processValues(pending);
-    pending = [];
-}, 3000);
+    sendMouseLocations(mouseLocations);
+    mouseLocations = [];
+}, 10000);
+
+$(document).mousemove(function(e) {
+    mouseLocations.push("X:" + e.clientX + " Y:" + e.clientY);
+});
 
 {% endhighlight %}
 
