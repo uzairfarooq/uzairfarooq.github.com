@@ -52,4 +52,4 @@ while(!stop) {
 
 Simple enough? Keep printing "Still running..." for 1 second and then stop. Guess what? It's a never-ending loop. Try it yourself in the console or check the [jsfiddle](http://jsfiddle.net/raL53b7s/4/) (**Warning: It may hang or crash your browser. You can kill it using Chrome Task Manager (Shift + T)**)
 
-The timer will be scheduled to trigger after 1 second but a code is already running i.e. the while loop, so it'll wait for it to Run-to-Completion. But the loop is only gonna stop if the timer callback gets executed.
+So, what's happening here? The timer will be scheduled to trigger after 1 second but a code is already running i.e. the while loop, so it'll wait for it to Run-to-Completion. But the loop is only gonna stop if the timer callback gets executed.
