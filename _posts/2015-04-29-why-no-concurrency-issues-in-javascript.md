@@ -8,6 +8,7 @@ tags: []
 ---
 
 
+
 We don't have semaphores, mutexes or any other concurrency control tool in javascript, ever wondered why? Having background in c++, when I moved to javascript, every other part of code left me wondering about race conditions.
 
 Lets consider a code snippet that sends all mouse movements to server every 10 seconds.
@@ -49,4 +50,6 @@ while(!stop) {
 
 {% endhighlight %}
 
-Keep printing "Still running..." for 1 second and then stop. Simple enough? Guess what? 
+Simple enough? Keep printing "Still running..." for 1 second and then stop. Guess what? It's a never-ending loop. Try it yourself in the console or check the [jsfiddle](http://jsfiddle.net/raL53b7s/1/) **Warning: It may hang or crash your browser.**
+
+The timer will be scheduled to trigger after 1 second but a code is already running i.e. the while loop, so it'll wait for it to Run-to-Completion. But the loop is only gonna stop if the timer callback gets executed.
