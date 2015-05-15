@@ -9,7 +9,7 @@ tags: []
 
 
 
-We don't have semaphores, mutexes or any other concurrency control tool in javascript, ever wondered why? Having background in c++, when I moved to javascript, every other part of code left me wondering about race conditions.
+We don't have semaphores, mutexes or any other concurrency control tool in javascript, ever wondered why? Having background in c++, when I moved to javascript, every other part of code left me wondering about race conditions. 
 
 Lets consider a code snippet that sends all mouse movements to server every 10 seconds.
 
