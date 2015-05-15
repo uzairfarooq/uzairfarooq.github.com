@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: "Why there are no concurrency issues in javascript?"
+title: "Why you never worry about Concurrency issues in javascript?"
 description: ""
 category: null
 tags: []
