@@ -42,7 +42,7 @@ Confused? Here's an interesting example:
 
 var run = true;
 setTimeout(function() {
-    run = true;
+    run = false;
 }, 1000);
 
 while(run) {
