@@ -39,12 +39,12 @@ Confused? Here's an interesting example:
 
 {% highlight javascript %}
 
-var stop = false;
+var run = true;
 setTimeout(function() {
-    stop = true;
+    run = false;
 }, 1000);
 
-while(!stop) {
+while(run) {
     console.log("Still running...");
 }
 
