@@ -51,6 +51,6 @@ while(run) {
 
 {% endhighlight %}
 
-Keep printing "Still running..." for 1 second and then stop. Simple? ... Guess what? It's a never-ending loop. Try it yourself in the console or check the [jsfiddle](http://jsfiddle.net/4a8qcpLe/) (**Warning: It may hang or crash your browser. Kill it using Chrome Task Manager (Shift + T)**)
+Keep printing "Still running..." for 1 second and then stop. Simple? ... Guess what? It's a never-ending loop. Try it yourself in the console or check the [jsfiddle](http://jsfiddle.net/77udxwoc/) (**Warning: It may hang or crash your browser. Kill it using Chrome Task Manager (Shift + T)**)
 
 So, what's happening here? The timer will be scheduled to trigger after 1 second but a code is already running i.e. the while loop, so it'll wait for it to Run-to-Completion. But the loop is only gonna stop if the timer callback gets executed and the timer is only gonna fire when loop gets completed. You see what the Run-to-Completion feature did there?
