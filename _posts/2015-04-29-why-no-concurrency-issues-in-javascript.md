@@ -9,6 +9,7 @@ tags: []
 
 
 
+
 We don't have semaphores, mutexes or any other concurrency control tool in javascript, ever wondered why? Having background in c++, when I moved to javascript, every other part of code left me wondering about race conditions. 
 
 Lets consider a code snippet that sends all mouse movements to server every 10 seconds.
@@ -41,7 +42,7 @@ Confused? Here's an interesting example:
 
 var run = true;
 setTimeout(function() {
-    run = false;
+    run = true;
 }, 1000);
 
 while(run) {
@@ -50,6 +51,6 @@ while(run) {
 
 {% endhighlight %}
 
-Keep printing "Still running..." for 1 second and then stop. Simple? ... Guess what? It's a never-ending loop. Try it yourself in the console or check the [jsfiddle](http://jsfiddle.net/raL53b7s/4/) (**Warning: It may hang or crash your browser. Kill it using Chrome Task Manager (Shift + T)**)
+Keep printing "Still running..." for 1 second and then stop. Simple? ... Guess what? It's a never-ending loop. Try it yourself in the console or check the [jsfiddle](http://jsfiddle.net/4a8qcpLe/) (**Warning: It may hang or crash your browser. Kill it using Chrome Task Manager (Shift + T)**)
 
 So, what's happening here? The timer will be scheduled to trigger after 1 second but a code is already running i.e. the while loop, so it'll wait for it to Run-to-Completion. But the loop is only gonna stop if the timer callback gets executed and the timer is only gonna fire when loop gets completed. You see what the Run-to-Completion feature did there?
