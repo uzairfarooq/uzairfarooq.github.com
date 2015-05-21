@@ -5,6 +5,10 @@
   margin-bottom: 12px;
 }
 
-.follow-me:not(:first-child) {
-  margin-left: 12px;
+.follow-me {
+  vertical-align: top;
+  
+  :not(:first-child) {
+    margin-left: 12px;
+  }
 }
