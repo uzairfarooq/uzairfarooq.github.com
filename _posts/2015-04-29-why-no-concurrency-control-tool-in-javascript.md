@@ -4,7 +4,7 @@ layout: post
 title: "Why we don't have a concurrency control tool in javascript?"
 description: ""
 category: null
-tags: []
+tags: [javascript]
 ---
 
 
