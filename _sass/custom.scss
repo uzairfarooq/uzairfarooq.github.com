@@ -7,8 +7,9 @@
 
 .follow-me {
   vertical-align: top;
+  display: inline-block;
 }
 
 .follow-me:not(:first-child) {
-  margin-left: 12px;
+  margin-left: 16px;
 }
