@@ -5,6 +5,6 @@
   margin-bottom: 12px;
 }
 
-.follow-me.github {
+.follow-me:not(:first-child) {
   margin-left: 12px;
 }
