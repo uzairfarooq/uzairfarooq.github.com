@@ -1,11 +1,12 @@
 ---
 published: true
 layout: post
-title: "Why there is no concurrency control tool in javascript?"
+title: "Why we don't have a concurrency control tool in javascript?"
 description: ""
 category: null
 tags: []
 ---
+
 
 
 
