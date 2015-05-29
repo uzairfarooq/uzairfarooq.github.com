@@ -120,7 +120,7 @@
 #header {
 	text-align: center;
   padding: 24px 0;
-  padding-bottom: 8px;
+  padding-bottom: 0px;
   position: relative;
   a {
   	text-decoration: none;
@@ -141,7 +141,8 @@
     content: '';
     width: 5rem;
     height: 1px;
-    margin: 23px auto;
+    margin: 12px auto;
+    margin-bottom: 4px;
     background-color: lighten($text-color, 70%);
   }
 }
