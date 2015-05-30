@@ -16,6 +16,9 @@ permalink: /:title
 paginate: 8
 paginate_path: /page:num/
 
+mixpanel :
+    token : 'a9e972009520fd33a5f6635c3ca9cb7d'
+
 # Default values
 defaults:
   -
