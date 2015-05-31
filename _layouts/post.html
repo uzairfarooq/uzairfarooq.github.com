@@ -16,7 +16,7 @@ layout: default
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'uzairfarooq';
     var disqus_identifier = '{{page.id}}';
-    var disqus_title = '{{page.title}}';
+    var disqus_title = '{{page.title}}'.replace(/'/g,"\'");
     var disqus_url = '{{site.url}}{{page.url}}';
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
