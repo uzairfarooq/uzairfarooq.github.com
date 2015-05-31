@@ -8,8 +8,8 @@ new (function() {
 
     function trackPageView() {
         mixpanel.track('Page Viewed', {
-            'Title' : document.title,
-            'Url' : window.location.pathname
+            'Page Title' : document.title,
+            'Page Url' : window.location.pathname
         });
     }
 
@@ -23,8 +23,8 @@ new (function() {
 
     function linkClicked() {
         mixpanel.track('Link Clicked', {
-            'Title' : this.innerText,
-            'Url' : this.href
+            'Link Title' : this.innerText,
+            'Link Url' : this.href
         });
     }
 
