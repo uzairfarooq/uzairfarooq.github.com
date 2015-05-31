@@ -6,4 +6,4 @@
 mixpanel.init("{{site.mixpanel.token}}");</script>
 <!-- end Mixpanel -->
 
-<script src="js/mixpanel.js"></script>
+<script src="{{ "js/mixpanel.js" | prepend: site.baseurl }}"></script>
