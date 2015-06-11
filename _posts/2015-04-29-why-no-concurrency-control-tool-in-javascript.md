@@ -10,9 +10,9 @@ tags:
 
 
 
-We don't have semaphores, mutexes or any other concurrency control tool in javascript, ever wondered why? Having background in c++, when I moved to javascript, every other part of code left me wondering about race conditions, and questions like [these](http://stackoverflow.com/questions/7266918/are-there-any-atomic-javascript-operations-to-deal-with-ajaxs-asynchronous-natu) kept popping up. 
+We don't have semaphores, mutexes or any other concurrency control tool in javascript, ever wondered why? Having background in c++, when I moved to javascript, every other part of code left me wondering about race conditions, and questions like [these](http://stackoverflow.com/questions/7266918/are-there-any-atomic-javascript-operations-to-deal-with-ajaxs-asynchronous-natu) kept popping up in my mind. 
 
-Lets consider a code snippet that sends all mouse movements to server every 10 seconds.
+Let's consider a code snippet that sends all mouse movements to server every 10 seconds.
 
 {% highlight javascript %}
 var queue = [];
