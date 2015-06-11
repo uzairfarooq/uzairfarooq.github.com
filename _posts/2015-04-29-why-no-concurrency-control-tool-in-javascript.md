@@ -1,12 +1,13 @@
 ---
 published: true
 layout: post
-title: "Why we don't have a concurrency control tool in javascript?"
+title: "Why don't we have a concurrency control tool in javascript?"
 description: ""
 category: null
 tags: 
   - javascript
 ---
+
 
 
 We don't have semaphores, mutexes or any other concurrency control tool in javascript, ever wondered why? Having background in c++, when I moved to javascript, every other part of code left me wondering about race conditions, and questions like [these](http://stackoverflow.com/questions/7266918/are-there-any-atomic-javascript-operations-to-deal-with-ajaxs-asynchronous-natu) kept popping up. 
