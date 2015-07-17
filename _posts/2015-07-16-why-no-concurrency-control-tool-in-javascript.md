@@ -10,6 +10,7 @@ tags:
 
 
 
+
 We don't have semaphores, mutexes or any other concurrency control tool in javascript, ever wondered why? Having background in c++, when I moved to javascript, every other part of code left me wondering about race conditions, and questions like [these](http://stackoverflow.com/questions/7266918/are-there-any-atomic-javascript-operations-to-deal-with-ajaxs-asynchronous-natu) kept popping up in my mind. 
 
 Lets consider a code snippet that sends all mouse movements to a server every 10 seconds.
@@ -53,4 +54,4 @@ while(run) {
 
 Keep printing "Still running..." for 1 second and then stop. Simple? ... Guess what? It's a never-ending loop. Try it yourself in the console or check the [jsfiddle](http://jsfiddle.net/77udxwoc/) (**Warning: It may hang or crash your browser**)
 
-So, what's happening here? The timer will be scheduled to trigger after 1 second but a code is already running i.e. the while loop. It'll wait for it to Run-to-Completion. But the loop is only going to stop if the timer callback gets executed and the timer will only fire when loop gets completed. You see what the Run-to-Completion feature did there?
+So, what's happening here? The timer will be scheduled to trigger after 1 second but a code is already running i.e. the while loop. It'll wait for it to Run-to-Completion. But the loop is only going to stop if the timer callback gets executed and the timer will only fire when loop gets completed. See what the Run-to-Completion feature did there?
